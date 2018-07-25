@@ -11,7 +11,6 @@ function dc($var){
 	preg_match_all("/dc\([^\]]*\)/", $line, $matches);
 	$var_name = str_replace(")","",str_replace("dc(","",@$matches[0][0]));
 	echo "<pre>"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n"; print_r($var);  echo "</pre>"; echo "<hr>";
-
 }
 
 # Debug detalhado e continua
