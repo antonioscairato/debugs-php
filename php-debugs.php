@@ -1,5 +1,7 @@
 <?php
 
+# Grupo de funções para avaliação de variáveis: exibem o tipo, nome, path e conteúdo, de forma simples ou detalhada, com interrupção ou não da execução do código
+
 # Debug e continua
 function dc($var){
 	$dbt = debug_backtrace();
@@ -46,4 +48,5 @@ function ddd($var){
 	echo "<pre>"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n"; var_dump($var);  echo "</pre>"; echo "<hr>";
 	die();
 }
+
 ?>
