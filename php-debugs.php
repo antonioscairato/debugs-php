@@ -8,8 +8,7 @@ function dc($var){
 	$line = $lines[$caller['line']-1]; 
 	preg_match_all("/dc\([^\]]*\)/", $line, $matches);
 	$var_name = str_replace(")","",str_replace("dc(","",@$matches[0][0]));
-	echo "<pre>"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
-	print_r($var);  echo "</pre>"; echo "<hr>";
+	echo "<pre>"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n"; print_r($var);  echo "</pre>"; echo "<hr>";
 
 }
 
@@ -21,12 +20,10 @@ function ddc($var){
 	$line = $lines[$caller['line']-1]; 
 	preg_match_all("/dc\([^\]]*\)/", $line, $matches);
 	$var_name = str_replace(")","",str_replace("dc(","",@$matches[0][0]));
-	echo "<pre>"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
-	var_dump($var);  echo "</pre>"; echo "<hr>";
-
+	echo "<pre>"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n"; var_dump($var);  echo "</pre>"; echo "<hr>";
 }
 
-# Debug e die()
+# Debug e interrompe a execução do código (die)
 function dd($var){
 	$dbt = debug_backtrace();
 	$caller = array_shift($dbt);
@@ -34,12 +31,11 @@ function dd($var){
 	$line = $lines[$caller['line']-1]; 
 	preg_match_all("/dd\([^\]]*\)/", $line, $matches);
 	$var_name = str_replace(")","",str_replace("dd(","",@$matches[0][0]));
-	echo "<pre>"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
-	print_r($var);  echo "</pre>"; echo "<hr>";
+	echo "<pre>"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n"; print_r($var); echo "</pre>"; echo "<hr>";
 	die();
 }
 
-# Debug detalhado e die()
+# Debug detalhado e interrompe a execução do código (die)
 function ddd($var){
 	$dbt = debug_backtrace();
 	$caller = array_shift($dbt);
@@ -47,8 +43,7 @@ function ddd($var){
 	$line = $lines[$caller['line']-1]; 
 	preg_match_all("/dd\([^\]]*\)/", $line, $matches);
 	$var_name = str_replace(")","",str_replace("dd(","",@$matches[0][0]));
-	echo "<pre>"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
-	var_dump($var);  echo "</pre>"; echo "<hr>";
+	echo "<pre>"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n"; var_dump($var);  echo "</pre>"; echo "<hr>";
 	die();
 }
 ?>
