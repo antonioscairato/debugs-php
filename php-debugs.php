@@ -53,6 +53,5 @@ function ddd($var){
 	var_dump($var);  echo "</pre>"; echo "<hr>";
 	die();
 }
-}
 
 ?>
