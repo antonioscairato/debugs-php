@@ -10,7 +10,7 @@ function dc($var){
 	$line = $lines[$caller['line']-1]; 
 	preg_match_all("/dc\([^\]]*\)/", $line, $matches);
 	$var_name = str_replace(")","",str_replace("dc(","",@$matches[0][0]));
-	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;margin: 10px;padding: 10px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
+	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;white-space:pre-wrap;margin: 10px;padding: 10px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
 	print_r($var);  echo "</pre>"; echo "<hr>";
 }
 
@@ -22,7 +22,7 @@ function ddc($var){
 	$line = $lines[$caller['line']-1]; 
 	preg_match_all("/dc\([^\]]*\)/", $line, $matches);
 	$var_name = str_replace(")","",str_replace("dc(","",@$matches[0][0]));
-	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;margin: 10px;padding: 10px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
+	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;white-space:pre-wrap;margin: 10px;padding: 10px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
 	var_dump($var);  echo "</pre>"; echo "<hr>";
 }
 
@@ -34,7 +34,7 @@ function dd($var){
 	$line = $lines[$caller['line']-1]; 
 	preg_match_all("/dd\([^\]]*\)/", $line, $matches);
 	$var_name = str_replace(")","",str_replace("dd(","",@$matches[0][0]));
-	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;margin: 10px;padding: 10px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
+	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;white-space:pre-wrap;margin: 10px;padding: 10px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
 	print_r($var);  echo "</pre>"; echo "<hr>";
 	die();
 }
@@ -47,9 +47,8 @@ function ddd($var){
 	$line = $lines[$caller['line']-1]; 
 	preg_match_all("/dd\([^\]]*\)/", $line, $matches);
 	$var_name = str_replace(")","",str_replace("dd(","",@$matches[0][0]));
-	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;margin: 10px;padding: 10px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
+	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;white-space:pre-wrap;margin: 10px;padding: 10px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
 	var_dump($var);  echo "</pre>"; echo "<hr>";
 	die();
-}
 
 ?>
