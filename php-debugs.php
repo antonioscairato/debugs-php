@@ -50,5 +50,6 @@ function ddd($var){
 	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;white-space:pre-wrap;margin: 10px;padding: 10px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
 	var_dump($var);  echo "</pre>"; echo "<hr>";
 	die();
+}
 
 ?>
