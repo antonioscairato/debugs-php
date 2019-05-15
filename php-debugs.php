@@ -12,7 +12,6 @@ function dc($var){
 	$var_name = str_replace(")","",str_replace("dc(","",@$matches[0][0]));
 	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;margin: 9px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
 	print_r($var);  echo "</pre>"; echo "<hr>";
-
 }
 
 # Debug detalhado e continua
@@ -25,7 +24,6 @@ function ddc($var){
 	$var_name = str_replace(")","",str_replace("dc(","",@$matches[0][0]));
 	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;margin: 9px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
 	var_dump($var);  echo "</pre>"; echo "<hr>";
-
 }
 
 # Debug e die()
@@ -52,7 +50,6 @@ function ddd($var){
 	echo "<pre style=\"background-color: #ffcc0082;border-radius: 14px;margin: 9px;border: 3px dashed #ffcc00;\">"; echo "(" . ($var_name? gettype($var)." <b>" . $var_name . "</b> " : "" )  . "em \"" . $caller['file'] . "\", linha: " . $caller['line'] . "):\n";
 	var_dump($var);  echo "</pre>"; echo "<hr>";
 	die();
-}
 }
 
 ?>
